@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Difa devv</title>
+</head>
+<body>
+
+<nav>
+    <div class="kiri">
+        <h2>DifaDev</h2>
+
+        <ul>
+            <li>Home</li>
+            <li>Service</li>
+         <a href="porto.html">
+    <li>Portfolio</li>
+</a>
+            <li>Contact</li>
+        </ul>
+    </div>
+
+    <div class="kanan">
+        <a href="https://www.instagram.com/socraztes" target="_blank">
+            <button>Instagram</button>
+        </a>
+
+        <a href="mailto:difasaid2604@gmail.com">
+            <button>Email</button>
+        </a>
+    </div>
+</nav>
+
+<section class="hero">
+    <h1>DifaDev</h1>
+
+    <p>
+        Jasa Website dan Bantuan IT/TKJ
+    </p>
+</section>
+
+<h2 style="text-align:center;">Layanan Saya</h2>
+
+<div class="container-produk">
+
+    <div class="jasa">
+        <img src="images/web.jpeg" alt="Jasa Website">
+
+        <h3>Jasa Membuat Website</h3>
+
+        <p>Rp100.000</p>
+
+        <button onclick="tambahKeranjang('Jasa Website',100000)">
+            BUY
+        </button>
+    </div>
+
+    <div class="jasa">
+        <img src="images/ChatGPT Image Jun 23, 2026, 01_59_45 PM.png" alt="Joki Tugas">
+
+        <h3>Joki Tugas</h3>
+
+        <p>Rp50.000</p>
+
+        <button onclick="tambahKeranjang('Joki Tugas',50000)">
+            BUY
+        </button>
+    </div>
+
+</div>
+
+
+
+<section>
+    <h2>Keranjang</h2>
+
+    <ul id="keranjang"></ul>
+
+    <p style="text-align:center;">
+        Total: Rp<span id="total">0</span>
+    </p>
+</section>
+
+<footer>
+    <p>© 2026 DifaDev</p>
+</footer>
+
+<script>
+let total = 0;
+
+function tambahKeranjang(namaProduk, harga) {
+
+    let keranjang = document.getElementById("keranjang");
+
+    let item = document.createElement("li");
+
+    item.textContent = namaProduk + " - Rp" + harga;
+
+    keranjang.appendChild(item);
+
+    total += harga;
+
+    document.getElementById("total").textContent = total;
+}
+</script>
+
+</body>
+
+<tail>
+    <h2></h2>
+
+<ul id="keranjang">
+</ul>
+</html>
